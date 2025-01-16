@@ -118,6 +118,7 @@ def main():
 
         if command in ["close", "exit"]:
             print(Fore.YELLOW + "Good bye!" + Style.RESET_ALL)
+            save_data(book)
             break
         elif command == "hello":
             print(Fore.YELLOW + "How can I help you?" + Style.RESET_ALL)
