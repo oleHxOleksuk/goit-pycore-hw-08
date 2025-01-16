@@ -1,9 +1,10 @@
 from field import Field
+from colorama import  Fore, Style
 
 class Phone(Field):
     def __init__(self, value):
         if not self.validate(value):
-            raise ValueError("Invalid phone number format. Should start from 0 and be 10 digits")
+            raise ValueError(Fore.RED + "Invalid phone number format. Should start from 0 and be 10 digits" + Style.RESET_ALL)
         super().__init__(value)
 
     def validate(self, value):

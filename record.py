@@ -1,6 +1,7 @@
 from name import Name
 from phone import Phone
 from birthday import Birthday
+from colorama import  Fore, Style
 
 class Record:
     def __init__(self, name):
@@ -21,7 +22,7 @@ class Record:
             if phone.value == old_phone:
                 phone.value = new_phone
                 return
-        raise ValueError("Phone number not found")
+        raise ValueError(Fore.RED + "Phone number not found" + Style.RESET_ALL)
         
     def find_phone(self, phone_number):
         for phone in self.phones:
